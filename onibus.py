@@ -96,6 +96,7 @@ class Aviao(Veiculos):
             if self.revisoes_feitas == 0:
                 self.revisoes_feitas = 1
             tempo_atraso = hr - self.revisoes_feitas * 100
+            print(tempo_atraso)
             if tempo_atraso < 0:
                 print(f'revisao adiantada em {tempo_atraso * -1}hrs')
             else:
@@ -108,11 +109,11 @@ class Aviao(Veiculos):
 
 
 bus1 = Onibus('Volkswagen','Viaggio G7 900',
-              2005, 'Azul', 35000, 3200, 3)
+              2005, 'Azul', 35000, 1000, 1)
 # bus2 = Onibus('Volvo', '9700 Grand S',
 #               2012, 'Amarelo', 15000, 45, 0)
 av1 = Aviao('Embraer','aviao1', 2008, 'azul', 120, 250, 2)
-av2 = Aviao('Boing','aviao2', 2024, 'azul', 120, 100, 0)
+av2 = Aviao('Boing','aviao2', 2024, 'azul', 120, 100, 1)
 # lista_bus = [bus1, bus2]
 # for bus in lista_bus:
 #     bus.exibir_info()
