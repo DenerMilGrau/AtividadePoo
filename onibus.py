@@ -12,7 +12,7 @@ class Veiculos:
 
 #       acelerar
 #       frear
-#       
+#       decolar
 
 class Onibus(Veiculos):
     def __init__(self, fabricante, modelo, ano, cor, quilometragem, qtde_passageiros):
