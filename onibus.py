@@ -1,13 +1,14 @@
 import datetime
 
 class Veiculos:
-    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas):
+    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas, imposto):
         self.fabricante = fabricante
         self.modelo = modelo
         self.ano = ano
         self.cor = cor
         self.qtde_passageiros = qtde_passageiros
         self.revisoes_feitas = revisoes_feitas
+        self.imposto = imposto
     def exibir_info(self):
         print('-*-'*10)
         print(f' Fabricante: {self.fabricante}\n'
@@ -17,10 +18,17 @@ class Veiculos:
               f' Qtde Passageiros: {self.qtde_passageiros}\n')
         print('-*-'*10)
 
+    def imposto_em_dia(self):
+        if self.imposto:
+            print('-*-'*10)
+            print('Imposto em dia...')
+        else:
+            print('-*-'*10)
+            print('Imposto atrasado...')
 
 class Onibus(Veiculos):
-    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, quilometragem, revisoes_feitas):
-        super().__init__(fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas)
+    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, quilometragem, revisoes_feitas, imposto):
+        super().__init__(fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas, imposto)
         self.quilometragem = quilometragem
     # polimorfismo, função sobrescrita
     def exibir_info(self):
@@ -63,8 +71,8 @@ class Onibus(Veiculos):
 
 
 class Aviao(Veiculos):
-    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, horas_voo, revisoes_feitas):
-        super().__init__(fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas)
+    def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, horas_voo, revisoes_feitas, imposto):
+        super().__init__(fabricante, modelo, ano, cor, qtde_passageiros, revisoes_feitas, imposto)
         self.horas_voo = horas_voo
 
     # polimorfismo, função sobrescrita
