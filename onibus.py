@@ -68,7 +68,9 @@ class Onibus(Veiculos):
                 else:
                     print(f'revisao atrasada em {tempo_atraso}kms')
 
-
+    def exibir_km(self):
+        print('-*-' * 10)
+        print(f' Quilometragem: {self.quilometragem}\n')
 
 class Aviao(Veiculos):
     def __init__(self, fabricante, modelo, ano, cor, qtde_passageiros, horas_voo, revisoes_feitas, imposto):
@@ -113,8 +115,9 @@ class Aviao(Veiculos):
                 else:
                     print(f'revisao atrasada em {tempo_atraso}hrs')
 
-
-
+    def exibir_horas(self):
+        print('-*-' * 10)
+        print(f' Horas de voo: {self.horas_voo}\n')
 
 bus1 = Onibus('Volkswagen','Viaggio G7 900',
               2005, 'Azul', 35000, 1000, 1)
